@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import goldAsset from "@/assets/logo-gold.png.asset.json";
-import navyAsset from "@/assets/logo-navy.png.asset.json";
+const goldLogo = "/logo-gold.png";
+const navyLogo = "/logo-navy.png";
 import { useTheme } from "@/lib/theme";
 
 interface LogoProps {
@@ -12,7 +12,9 @@ interface LogoProps {
 
 export function Logo({ className, height = 48, animate = true, priority }: LogoProps) {
   const { resolved } = useTheme();
-  const src = resolved === "dark" ? goldAsset.url : navyAsset.url;
+  const src = resolved === "dark"
+  ? goldLogo
+  : navyLogo;
 
   const img = (
     <img

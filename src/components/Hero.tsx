@@ -178,11 +178,11 @@ export function Hero() {
 }
 
 // Use gold logo directly for hero (always dark background)
-import goldAsset from "@/assets/logo-gold.png.asset.json";
+const goldLogo = "/logo-gold.png";
 function HeroLogo() {
   return (
     <motion.img
-      src={goldAsset.url}
+      src={goldLogo}
       alt="7ACE Holidays"
       className="h-auto"
       style={{ width: "min(320px, 62vw)" }}

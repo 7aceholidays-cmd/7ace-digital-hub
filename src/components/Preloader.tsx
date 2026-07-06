@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import goldAsset from "@/assets/logo-gold.png.asset.json";
+const goldLogo = "/logo-gold.png";
 
 export function Preloader() {
   const [visible, setVisible] = useState(true);
@@ -34,7 +34,7 @@ export function Preloader() {
           />
           <div className="flex flex-col items-center gap-6">
             <motion.img
-              src={goldAsset.url}
+              src={goldLogo}
               alt="7ACE Holidays"
               style={{ height: 110, width: "auto" }}
               initial={{ opacity: 0, scale: 0.9, filter: "blur(6px)" }}
